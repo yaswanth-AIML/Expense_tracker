@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker (UI Representation)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Expense Tracker</h1>
+<p class="subtitle">Frontend representation of CLI Python code</p>
+
+<div class="menu">
+
+    <button onclick="showSection('expense')">1️⃣ Expense 💸</button>
+    <button onclick="showSection('income')">2️⃣ Income 💰</button>
+    <button onclick="showSection('savings')">3️⃣ Savings 🏦</button>
+    <button onclick="showSection('totalIncome')">4️⃣ Total Income 📈</button>
+    <button onclick="showSection('totalExpense')">5️⃣ Total Expense 📈</button>
+    <button onclick="exitApp()">6️⃣ Exit</button>
+
+</div>
+
+<!-- EXPENSE -->
+<section id="expense" class="card hidden">
+    <h2>Add Expense 💸</h2>
+
+    <input type="text" placeholder="Expense Name" id="expName">
+
+    <select id="expCategory">
+        <option>Select Category</option>
+        <option>1)🍔Food</option>
+        <option>2)🚕Transportation</option>
+        <option>3)🏠Housing</option>
+        <option>4)📚Education & Learning</option>
+        <option>5)🎮Entertainment</option>
+        <option>6)🛍️Shopping</option>
+        <option>7)💊Health</option>
+        <option>8)💼Others</option>
+    </select>
+
+    <input type="number" placeholder="Amount" id="expAmount">
+    <input type="date" id="expDate">
+
+    <button onclick="saveExpense()">Save Expense</button>
+</section>
+
+<!-- INCOME -->
+<section id="income" class="card hidden">
+    <h2>Add Income 💰</h2>
+
+    <input type="number" placeholder="Income Amount" id="incAmount">
+    <input type="date" id="incDate">
+
+    <button onclick="saveIncome()">Save Income</button>
+</section>
+
+<!-- OUTPUT -->
+<section id="output" class="card hidden">
+    <h2>Program Output</h2>
+    <pre id="console"></pre>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
